@@ -9,14 +9,6 @@ button.addEventListener("click", function () {
     li.textContent = item;
     groceryList.appendChild(li);
   }
-
-  const delBtn = document.createElement("button");
-  delBtn.innerText = "X";
-  delBtn.className = "delete";
-  delBtn.onclick = function () {
-    groceryList.removeChild(li);
-  };
-
-  li.appendChild(delBtn);
   groceryList.appendChild(li);
 });
+input.value = "";
