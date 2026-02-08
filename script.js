@@ -4,11 +4,18 @@ const groceryList = document.getElementById("groceryList");
 
 button.addEventListener("click", function () {
   const item = input.value;
-  if (item) {
+  if (item !== "") {
     const li = document.createElement("li");
     li.textContent = item;
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.onclick = function () {
+      li.remove();
+    };
+
+    li.appendChild(deleteBtn);
     groceryList.appendChild(li);
+    input.value = "";
   }
-  groceryList.appendChild(li);
 });
-input.value = "";
