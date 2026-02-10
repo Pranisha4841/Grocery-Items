@@ -8,6 +8,9 @@ button.addEventListener("click", function () {
   const text = input.value.trim();
   if (text === "") return;
 
+  const now = new Date();
+  const dateStr = now.toLocaleString();
+
   if (editItem !== null) {
     editItem.querySelector("span").textContent = text;
     button.textContent = "Add Item";
@@ -17,6 +20,7 @@ button.addEventListener("click", function () {
 
     const span = document.createElement("span");
     span.textContent = text;
+    li.appendChild(span);
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
@@ -36,7 +40,7 @@ button.addEventListener("click", function () {
         input.value = "";
       }
     };
-    li.appendChild(span);
+
     li.appendChild(editBtn);
     li.appendChild(deleteBtn);
 
