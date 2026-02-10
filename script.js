@@ -12,14 +12,17 @@ button.addEventListener("click", function () {
   const dateStr = now.toLocaleString();
 
   if (editItem !== null) {
-    editItem.querySelector("span").textContent = text;
+    const span = editItem.querySelector("span");
+    span.textContent = text + " (" + editItem.dataset.date + ")";
     button.textContent = "Add Item";
     editItem = null;
   } else {
     const li = document.createElement("li");
 
+    li.dataset.date = dateStr;
+
     const span = document.createElement("span");
-    span.textContent = text;
+    span.textContent = text + " (" + dateStr + ")";
     li.appendChild(span);
 
     const editBtn = document.createElement("button");
