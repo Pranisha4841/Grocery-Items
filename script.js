@@ -10,13 +10,17 @@ button.addEventListener("click", function () {
 
     const edit = document.createElement("button");
     edit.textContent = "Edit";
-
+    edit.onclick = function () {
+      const newItem = prompt("Edit item:", span.textContent);
+      if (newItem !== null && newItem !== "") {
+        span.textContent = newItem;
+      }
+    };
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
     deleteBtn.onclick = function () {
       li.remove();
     };
-
     li.appendChild(edit);
     li.appendChild(deleteBtn);
 
