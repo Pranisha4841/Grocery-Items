@@ -29,19 +29,21 @@ button.addEventListener("click", function () {
     spanDate.className = "item-date";
     spanDate.textContent = dateStr;
 
-    li.appendChild(spanText);
-    li.appendChild(spanDate);
+    const buttonGroup = document.createElement("div");
+    buttonGroup.className = "button-group";
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
+    editBtn.className = "edit";
     editBtn.onclick = function () {
-      input.value = span.textContent;
+      input.value = spanText.textContent;
       button.textContent = "Update Item";
       editItem = li;
     };
 
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "Delete";
+    deleteBtn.className = "delete";
     deleteBtn.onclick = function () {
       li.remove();
       if (editItem === li) {
@@ -51,8 +53,12 @@ button.addEventListener("click", function () {
       }
     };
 
-    li.appendChild(editBtn);
-    li.appendChild(deleteBtn);
+    buttonGroup.appendChild(editBtn);
+    buttonGroup.appendChild(deleteBtn);
+
+    li.appendChild(spanText);
+    li.appendChild(spanDate);
+    li.appendChild(buttonGroup);
 
     groceryList.appendChild(li);
   }
