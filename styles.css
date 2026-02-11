@@ -7,13 +7,12 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   padding: auto;
-  background-color: rgb(172, 219, 172);
+  background-color: rgb(233, 152, 179);
   justify-content: center;
   align-items: center;
   display: flex;
   height: 75vh;
   color: rgb(3, 3, 2);
-  background: linear-gradient(135deg, #a8e6cf, #dcedc1);
 }
 .container {
   padding: 30px;
@@ -46,7 +45,7 @@ button:hover {
 input {
   padding: 30px;
   border-radius: 5px;
-  background-color: beige;
+  background-color: rgb(224, 209, 202);
   color: black;
   font-size: 15px;
   height: 30px;
@@ -56,10 +55,10 @@ input {
 }
 input:focus {
   border-color: #74a777;
-  box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
+  box-shadow: 0 0 5px rgba(212, 103, 119, 0.4);
 }
 li {
-  background-color: lightgreen;
+  background-color: rgb(160, 214, 160);
   margin: 10px;
   padding: 10px;
   border-radius: 5px;
@@ -75,6 +74,9 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgb(212, 124, 117);
 }
 li button {
   background-color: rgb(0, 2, 2);
@@ -82,13 +84,31 @@ li button {
   border: none;
   padding: 4px 8px;
   border-radius: 5px;
-  margin-left: 5px;
   cursor: pointer;
   gap: 20px;
   justify-content: space-between;
   display: flex;
-  font-size: 14px;
+  margin-bottom: 10px;
+  align-items: center;
+  font-size: 15px;
 }
-li button:hover {
-  background-color: rgb(100, 101, 99);
+li button + button {
+  margin-left: 10px;
+}
+i button:first-of-type {
+  background-color: #3498db;
+  color: white;
+}
+
+li button:first-of-type:hover {
+  background-color: #164b87;
+}
+
+li button:last-of-type {
+  background-color: #e74c3c;
+  color: white;
+}
+
+li button:last-of-type:hover {
+  background-color: #871104;
 }
