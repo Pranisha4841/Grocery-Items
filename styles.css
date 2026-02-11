@@ -13,6 +13,7 @@ body {
   display: flex;
   height: 75vh;
   color: rgb(3, 3, 2);
+  background: linear-gradient(135deg, #a8e6cf, #dcedc1);
 }
 .container {
   padding: 30px;
@@ -22,6 +23,7 @@ body {
   background-color: beige;
   width: 400px;
   height: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 h1 {
   margin: 20px;
@@ -35,6 +37,8 @@ button {
   color: white;
   font-size: 15px;
   align-content: center;
+  display: flex;
+  flex-direction: column;
 }
 button:hover {
   background-color: rgb(3, 100, 42);
@@ -47,6 +51,12 @@ input {
   font-size: 15px;
   height: 30px;
   width: 300px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+input:focus {
+  border-color: #74a777;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.4);
 }
 li {
   background-color: lightgreen;
