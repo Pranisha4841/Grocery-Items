@@ -12,18 +12,25 @@ button.addEventListener("click", function () {
   const dateStr = now.toLocaleString();
 
   if (editItem !== null) {
-    const span = editItem.querySelector("span");
-    span.textContent = text + " (" + editItem.dataset.date + ")";
+    const spanText = editItem.querySelector(".item-text");
+    const spanDate = editItem.querySelector(".item-date");
+    spanText.textContent = text;
+    spanDate.textContent = new Date().toLocaleString();
     button.textContent = "Add Item";
     editItem = null;
   } else {
     const li = document.createElement("li");
 
-    li.dataset.date = dateStr;
+    const spanText = document.createElement("span");
+    spanText.className = "item-text";
+    spanText.textContent = text;
 
-    const span = document.createElement("span");
-    span.textContent = text + " (" + dateStr + ")";
-    li.appendChild(span);
+    const spanDate = document.createElement("span");
+    spanDate.className = "item-date";
+    spanDate.textContent = dateStr;
+
+    li.appendChild(spanText);
+    li.appendChild(spanDate);
 
     const editBtn = document.createElement("button");
     editBtn.textContent = "Edit";
