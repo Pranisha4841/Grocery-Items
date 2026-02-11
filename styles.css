@@ -7,7 +7,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: auto;
   padding: auto;
-  background-color: rgb(233, 152, 179);
+  background-color: black;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -18,14 +18,16 @@ body {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  display: inline;
-  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  justify-content: upper;
+  background-color: rgb(233, 233, 197);
   width: 400px;
   height: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 h1 {
-  margin: 20px;
+  margin: 15px;
   align-content: center;
   font-size: 30px;
 }
@@ -40,7 +42,7 @@ button {
   flex-direction: column;
 }
 button:hover {
-  background-color: rgb(3, 100, 42);
+  background-color: rgb(4, 78, 140);
 }
 input {
   padding: 30px;
